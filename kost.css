@@ -1,0 +1,562 @@
+/* Kost CSS - Brown Theme */
+
+:root {
+    --brown: #8b4513;
+    --light-brown: #a0522d;
+    --dark-brown: #654321;
+    --cream: #f5deb3;
+    --light-cream: #faf0e6;
+    --black: #2c1810;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--dark-brown), var(--brown));
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(139,69,19,0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cream) !important;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    background: var(--cream);
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--cream) !important;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(44,24,16,0.7), rgba(44,24,16,0.8)), url('kost.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139,69,19,0.4), rgba(44,24,16,0.6));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-icon {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--brown), var(--light-brown));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 5rem;
+    color: var(--white);
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 10px 40px rgba(139,69,19,0.5);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--cream);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-brown {
+    background: var(--brown);
+    border: none;
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139,69,19,0.4);
+}
+
+.btn-brown:hover {
+    background: var(--dark-brown);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139,69,19,0.6);
+    color: var(--white);
+}
+
+.btn-outline-light {
+    border: 2px solid var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: var(--white);
+    color: var(--brown);
+    transform: translateY(-3px);
+}
+
+/* Section */
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light-brown {
+    background: linear-gradient(135deg, var(--brown), var(--light-brown));
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--brown);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(to right, var(--brown), var(--light-brown));
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.rounded-custom {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Feature List */
+.feature-list {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.feature-item i {
+    color: var(--brown);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* Room Card */
+.room-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139,69,19,0.3);
+}
+
+.room-card.featured {
+    border: 3px solid var(--brown);
+}
+
+.room-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.room-card:hover .room-image img {
+    transform: scale(1.1);
+}
+
+.room-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--brown);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.room-badge.premium {
+    background: var(--dark-brown);
+}
+
+.room-content {
+    padding: 2rem;
+}
+
+.room-content h4 {
+    color: var(--brown);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.room-price {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.room-price .price-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--brown);
+    margin-bottom: 1rem;
+}
+
+/* WhatsApp Button */
+.btn-wa {
+    background: #25D366;
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-wa:hover {
+    background: #128C7E;
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-wa i {
+    font-size: 1.3rem;
+}
+
+.room-features {
+    list-style: none;
+    padding: 0;
+}
+
+.room-features li {
+    padding: 0.7rem 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.room-features li:last-child {
+    border-bottom: none;
+}
+
+.room-features li i {
+    color: var(--brown);
+    margin-right: 0.8rem;
+    width: 20px;
+}
+
+/* Facility Card */
+.facility-card {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+.facility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(139,69,19,0.2);
+}
+
+.facility-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--brown), var(--light-brown));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.facility-card:hover .facility-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.facility-card h5 {
+    color: var(--brown);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Rules Card */
+.rules-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: #555;
+    border-bottom: 2px dashed #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.rules-list li:last-child {
+    border-bottom: none;
+}
+
+.rules-list li i {
+    color: var(--brown);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 300px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(139,69,19,0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Info Box */
+.info-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 5px solid var(--brown);
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139,69,19,0.2);
+}
+
+.info-box i {
+    font-size: 3rem;
+    color: var(--brown);
+    margin-bottom: 1rem;
+}
+
+.info-box h5 {
+    color: var(--brown);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Footer - Kontras dengan Cream */
+.footer {
+    background: var(--cream);
+    color: var(--dark-brown);
+    padding: 3rem 0 1.5rem;
+    border-top: 5px solid var(--brown);
+}
+
+.footer h5 {
+    color: var(--brown);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer .text-light {
+    color: var(--dark-brown) !important;
+}
+
+.footer p {
+    color: var(--dark-brown);
+}
+
+.border-cream {
+    border-color: var(--brown) !important;
+    opacity: 0.3;
+}
+
+.btn-outline-cream {
+    border: 2px solid var(--brown);
+    color: var(--brown);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-outline-cream:hover {
+    background: var(--brown);
+    color: var(--white);
+    border-color: var(--brown);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .room-image {
+        height: 250px;
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+    
+    .room-content h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .btn-brown,
+    .btn-outline-light {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .rules-card {
+        padding: 1.5rem;
+    }
+    
+    .btn-wa {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
